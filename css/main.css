@@ -35,6 +35,8 @@ div {
 
   background-color: limegreen;
   opacity: 0;
+
+  transition: all 200ms ease-in-out;
 }
 
 .show {
@@ -86,6 +88,7 @@ div {
 .circle {
   height: 100px;
   top: calc(50% - 50px);
+  right: 15px;
   width: 100px;
 
   background-color: orange;
@@ -96,9 +99,23 @@ div {
   animation: bounce 1s alternate;
 }
 
-@keyframes spin {
+@keyframes bounce {
+ 
   0% {
+    top: calc(50% - 50px);
+    right: 15px;
+  }
+
+  20% {
     top: calc(50% - 100px);
+  }
+
+  60% {
+    top: 50%;
+  }
+
+  100% {
+    right: 200px;
   }
 }
 

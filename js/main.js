@@ -14,24 +14,29 @@ var $btnAppend = $('.btn-append');
 var $list = $('.list');
 
 $btnShowHide.on('click', $box, function () {
-	$box.toggleClass('show');
+  $box.toggleClass('show');
 });
 
 $btnMove.on('click', $diamond, function () {
-	$diamond.toggleClass('diamond-in');
+  $diamond.toggleClass('diamond-in');
 });
 
 $btnCollapse.on('click', $panel, function () {
-	$panel.toggleClass('collapse');
+  $panel.toggleClass('collapse');
 });
 
-// $btnCollapse.on('click', $panel, function () {
+$btnBounce.on('click', $circle, function () {
+  $circle.addClass('bounce');
+});
 
-// });
+$circle.on('animationend', function () {
+  $circle.removeClass('bounce');
+});
 
-$btnAppend.on('click', $ul, function () {
-	var $li = $('<li>');
+$list.on('click', $btnAppend, function (list) {
+  var $li = $('<li>');
 
-	$li.html('New List Item')
-	$list.append($li);
+  $li.html('New List Item');
+  $list.append($li);
+
 });
