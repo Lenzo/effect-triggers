@@ -59,8 +59,6 @@ div {
   right: 100px;
 }
 
-
-
 .panel {
   max-height: 10em;
   overflow: hidden;
@@ -100,7 +98,7 @@ div {
 }
 
 @keyframes bounce {
- 
+
   0% {
     top: calc(50% - 50px);
     right: 15px;
@@ -119,7 +117,6 @@ div {
   }
 }
 
-
 .list {
   bottom: 1em;
   margin: 0;
@@ -137,11 +134,18 @@ div {
 .list li {
   overflow: hidden;
   padding: 0 0.5em;
-  max-height: 0;
+  height: 0;
 
   background-color: plum;
   border: 1px solid mediumpurple;
   overflow: hidden;
 
   color: mediumpurple;
+  transition: height 300ms linear;
 }
+
+.expand {
+  height: 1.5rem;
+}
+
+change it to max height and use an anitmaito

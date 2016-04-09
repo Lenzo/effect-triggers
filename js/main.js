@@ -33,10 +33,10 @@ $circle.on('animationend', function () {
   $circle.removeClass('bounce');
 });
 
-$list.on('click', $btnAppend, function (list) {
+$btnAppend.on('click', $btnAppend, function (list) {
   var $li = $('<li>');
 
-  $li.html('New List Item');
   $list.append($li);
-
+  $li.html('New List Item');
+  $li.addClass('expand');
 });
